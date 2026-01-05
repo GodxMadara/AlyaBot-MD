@@ -16,7 +16,7 @@ Alya Bot es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofre
 
 ---
 
-## ☃️ Características
+## 🥦 Características
 
 - Respuestas automáticas
 - Gestión de grupos
@@ -25,7 +25,7 @@ Alya Bot es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofre
 
 ---
 
-## 🌴 Informaciones Importantes
+## Informaciones Importantes
 
 <details>
 <summary><strong>🌵 Información</strong> — Warning</summary>
@@ -140,8 +140,8 @@ npm start
   <img src="https://contrib.rocks/image?repo=DevZyxlJs/AlyaBot-MD&v=3" />
 </a>
 
-### 🌺 Creditos Principales
-[![Carlos](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs) [![GataDios](https://github.com/GataNina-Li.png?size=100)](https://github.com/GataNina-Li)
+### 🌱 Agradecimientos
+[![Carlos](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs)
 
 ### 🦩 Propietario
 [![ZyxlJs](https://github.com/DevZyxlJs.png?size=120)](https://zyxljs.stellarwa.xyz) 
