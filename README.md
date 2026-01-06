@@ -206,11 +206,6 @@ cd && cd AlyaBot-MD && rm -rf Sessions/Owner && npm start
 
 ---
 
-### 🪶 Colaboradores
-<a href="https://api.stellarwa.xyz">
-  <img src="https://contrib.rocks/image?repo=DevZyxlJs/AlyaBot-MD&v=3" />
-</a>
-
 ### 🌱 Agradecimientos
 [![Carlos](https://github.com/AzamiJs.png?size=100)](https://github.com/AzamiJs)
 
