@@ -61,7 +61,7 @@ Ninguna réplica, modificación o derivado externo tiene relación con mi trabaj
 
 ---
 
-### Instalación en CloudShell
+### Instalaciónes
 
 <details>
 <summary><strong>🦦 Cloud</strong> — Shell</summary>
@@ -88,12 +88,8 @@ npm start
 
 </details>
 
----
-
-### Instalación en Termux
-
 <details>
-<summary><strong>🌴 Termux</summary>
+<summary><strong>🦦 Termux</summary>
 
 ```bash
 git clone https://github.com/DevZyxlJs/AlyaBot-MD
