@@ -2,7 +2,7 @@ export default {
   command: ['hidetag', 'tag'],
   category: 'grupo',
   isAdmin: true,
-  run: async (client, m, args) => {
+  run: async ({client, m, args}) => {
     const text = args.join(' ')
     const groupMetadata = m.isGroup ? await client.groupMetadata(m.chat).catch(() => null) : null
     const groupParticipants = groupMetadata?.participants || []
@@ -13,7 +13,7 @@ export default {
       .map(id => client.decodeJid(id))
 
     if (!m.quoted && !text) {
-      return m.reply(`🍒 *Ingresa* un texto o *responde* a uno`)
+      return m.reply(`🌱 Ingresa un texto o responde a uno`)
     }
 
     const q = m.quoted || m
@@ -27,27 +27,67 @@ export default {
     }
 
     const isMedia = /image|video|sticker|audio/.test(mime)
-    const finalText = text || q?.text || q?.body || ''
 
-    try {
-      if (q && isMedia) {
-        const media = await q.download()
-        const options = { quoted: null, mentions }
+const quotedText =
+  q?.text ||
+  q?.caption ||
+  q?.body ||
+  q?.message?.conversation ||
+  q?.message?.extendedTextMessage?.text ||
+  ''
 
-        if (q.mtype === 'imageMessage') {
-          return client.sendMessage(m.chat, { image: media, caption: finalText, ...options })
-        } else if (q.mtype === 'videoMessage') {
-          return client.sendMessage(m.chat, { video: media, mimetype: 'video/mp4', caption: finalText, ...options })
-        } else if (q.mtype === 'audioMessage') {
-          return client.sendMessage(m.chat, { audio: media, mimetype: 'audio/mp4', fileName: 'hidetag.mp3', ...options })
-        } else if (q.mtype === 'stickerMessage') {
-          return client.sendMessage(m.chat, { sticker: media, ...options })
-        }
-      }
+const finalText = text || quotedText
+const hasText = Boolean(finalText && finalText.trim())
 
-      return client.sendMessage(m.chat, { text: finalText, mentions }, { quoted: null })
-    } catch (e) {
-      return m.reply(`《✧》 Error al ejecutar el comando.`)
+try {
+  if (isMedia) {
+    const media = await q.download()
+    const options = { quoted: null, mentions }
+
+    if (/image/.test(mime)) {
+      return client.sendMessage(
+        m.chat,
+        hasText
+          ? { image: media, caption: text, ...options }
+          : { image: media, ...options }
+      )
     }
+
+    if (/video/.test(mime)) {
+      return client.sendMessage(
+        m.chat,
+        hasText
+          ? { video: media, mimetype: 'video/mp4', caption: text, ...options }
+          : { video: media, mimetype: 'video/mp4', ...options }
+      )
+    }
+
+    if (/audio/.test(mime)) {
+      return client.sendMessage(
+        m.chat,
+        { audio: media, mimetype: 'audio/mp4', fileName: 'hidetag.mp3', ...options }
+      )
+    }
+
+    if (/sticker/.test(mime)) {
+      return client.sendMessage(
+        m.chat,
+        { sticker: media, ...options }
+      )
+    }
+  }
+  if (!hasText) {
+    return m.reply('🌱 Ingresa un texto o responde a un mensaje.')
+  }
+
+  return client.sendMessage(
+    m.chat,
+    { text: finalText, mentions },
+    { quoted: null }
+  )
+
+} catch (e) {
+  return m.reply(msgglobal)
+}
   }
 }
