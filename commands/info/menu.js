@@ -1,31 +1,16 @@
-import fetch from 'node-fetch';
-import { getDevice } from '@whiskeysockets/baileys';
-import fs from 'fs';
-import axios from 'axios';
-import moment from 'moment-timezone';
-
-const COMMANDS_URL = 'https://rest.alyabotpe.xyz/src/commands.js'
+import { getDevice } from '@whiskeysockets/baileys'
+import moment from 'moment-timezone'
+import { commands } from '../../lib/comandos.js'
 
 export default {
   command: ['allmenu', 'help', 'menu'],
   category: 'info',
   run: async (client, m, args, command, text, prefix) => {
     try {
-      const res = await fetch(COMMANDS_URL)
-      const commandsText = await res.text()
-      const commandsMatch = commandsText.match(/const commands = (\[[^]*?\]);/)
-      if (!commandsMatch)
-        throw new Error('No se pudo encontrar la variable `commands` en el archivo.')
-
-      const commands = eval(commandsMatch[1])
       const now = new Date()
       const colombianTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Bogota' }))
       const tiempo = colombianTime
-        .toLocaleDateString('en-GB', {
-          day: '2-digit',
-          month: 'short',
-          year: 'numeric',
-        })
+        .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
         .replace(/,/g, '')
       const tiempo2 = moment.tz('America/Bogota').format('hh:mm A')
 
@@ -42,17 +27,11 @@ export default {
       const isOficialBot = botId === global.client.user.id.split(':')[0] + '@s.whatsapp.net'
       const isPremiumBot = botSettings.botprem === true
       const isModBot = botSettings.botmod === true
-      const botType = isOficialBot
-        ? 'Owner'
-        : isPremiumBot
-          ? 'Premium'
-          : isModBot
-            ? 'Main'
-            : 'Sub Bot'
+      const botType = isOficialBot ? 'Owner' : isPremiumBot ? 'Premium' : isModBot ? 'Main' : 'Sub Bot'
       const users = Object.keys(global.db.data.users).length
 
-     const time = client.uptime ? formatearMs(Date.now() - client.uptime) : "Desconocido"
-      const device = getDevice(m.key.id);
+      const time = client.uptime ? formatearMs(Date.now() - client.uptime) : "Desconocido"
+      const device = getDevice(m.key.id)
 
       let menu = `> *¡ʜᴏʟᴀ!* ${global.db.data.users[m.sender].name}, como está tu día?, mucho gusto mi nombre es *${botname2}*
 
@@ -67,8 +46,6 @@ export default {
 → *ᴜʀʟ ::* ${link}
 → *ᴍɪ ᴛɪᴇᴍᴘᴏ ::* ${time}
 → *sᴏʙʀᴇ ᴍɪ ᴄʀᴇᴀᴅᴏʀ ::* https://zyxljs.stellarwa.xyz
-
-࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛   .   ࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛
 
 乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂\n`
 
@@ -88,104 +65,72 @@ export default {
       for (const [category, cmds] of Object.entries(categories)) {
         if (categoryArg && category.toLowerCase() !== categoryArg) continue
         const catName = category.charAt(0).toUpperCase() + category.slice(1)
-         menu += `\n .  . ︵ *${catName}*.  ◌Ⳋ𝅄\n`;
+        menu += `\n .  . ︵ *${catName}*.  ◌Ⳋ𝅄\n`
         cmds.forEach((cmd) => {
-          const cleanPrefix = prefix
-          const aliases = cmd.alias
-            .map((a) => {
-              const aliasClean = a
-                .split(/[\/#!+.\-]+/)
-                .pop()
-                .toLowerCase()
-              return `${prefix}${aliasClean}`
-            })
-            .join(' › ')
+          const aliases = cmd.alias.map(a => `${prefix}${a}`).join(' › ')
           menu += `.꒷🌳.𖦹˙ ${aliases} ${cmd.uso ? `+ ${cmd.uso}` : ''}\n`
           menu += `> ${cmd.desc}\n`
         })
       }
 
-menu += `\n> *${botname2} desarrollado por ZyxlJs* ૮(˶ᵔᵕᵔ˶)ა`
+      menu += `\n> *${botname2} desarrollado por ZyxlJs* ૮(˶ᵔᵕᵔ˶)ა`
 
-if (banner.endsWith('.mp4') || banner.endsWith('.gif') || banner.endsWith('.webm')) {
-await client.sendMessage(
-  m.chat,
-  {
-    video: { url: banner },
-    gifPlayback: true,
-    caption: menu,
-    contextInfo: {
-      mentionedJid: [owner],
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: canalid,
-        serverMessageId: '0',
-        newsletterName: canalname,
+      if (banner.endsWith('.mp4') || banner.endsWith('.gif') || banner.endsWith('.webm')) {
+        await client.sendMessage(
+          m.chat,
+          {
+            video: { url: banner },
+            gifPlayback: true,
+            caption: menu,
+            contextInfo: {
+              mentionedJid: [owner],
+              isForwarded: true,
+              forwardedNewsletterMessageInfo: {
+                newsletterJid: canalid,
+                serverMessageId: '0',
+                newsletterName: canalname
+              }
+            }
+          },
+          { quoted: m }
+        )
+      } else {
+        await client.sendMessage(
+          m.chat,
+          {
+            text: menu,
+            contextInfo: {
+              mentionedJid: [owner],
+              isForwarded: true,
+              forwardedNewsletterMessageInfo: {
+                newsletterJid: canalid,
+                serverMessageId: '0',
+                newsletterName: canalname
+              },
+              externalAdReply: {
+                title: botname,
+                body: `${botname2}, Built With 💛 By Stellar`,
+                showAdAttribution: false,
+                thumbnailUrl: banner,
+                mediaType: 1,
+                previewType: 0,
+                renderLargerThumbnail: true
+              }
+            }
+          },
+          { quoted: m }
+        )
       }
-    }
-  },
-  { quoted: m }
-)
-} else {
-  await client.sendMessage(
-    m.chat,
-    {
-      text: menu,
-      contextInfo: {
-        mentionedJid: [owner],
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: canalid,
-          serverMessageId: '0',
-          newsletterName: canalname,
-        },
-        externalAdReply: {
-          title: botname,
-          body: `${botname2}, Built With 💛 By Stellar`,
-          showAdAttribution: false,
-          thumbnailUrl: banner,
-          mediaType: 1,
-          previewType: 0,
-          renderLargerThumbnail: true
-        }
-      }
-    },
-    { quoted: m }
-  )
-}
-
-/*await client.sendMessage(
-  m.chat,
-  {
-    text: menu.trim(),
-    contextInfo: {
-      mentionedJid: [owner, m.sender],
-      isForwarded: false,
-      externalAdReply: {
-        title: botname,
-        body: `${botname2}, Built With 💛 By Stellar`,
-        showAdAttribution: false,
-        thumbnailUrl: banner,
-      //  thumbnail: banner,
-      //  sourceUrl: redes,
-        mediaType: 1,
-        previewType: 0,
-        renderLargerThumbnail: true
-      }
-    }
-  },
-  { quoted: m }
-)*/
     } catch (e) {
-      await m.reply(msgglobal + e)
+      await m.reply('Error: ' + e.message)
     }
   }
-};
+}
 
 function formatearMs(ms) {
-  const segundos = Math.floor(ms / 1000);
-  const minutos = Math.floor(segundos / 60);
-  const horas = Math.floor(minutos / 60);
-  const dias = Math.floor(horas / 24);
-  return [dias && `${dias}d`, `${horas % 24}h`, `${minutos % 60}m`, `${segundos % 60}s`].filter(Boolean).join(" ");
+  const segundos = Math.floor(ms / 1000)
+  const minutos = Math.floor(segundos / 60)
+  const horas = Math.floor(minutos / 60)
+  const dias = Math.floor(horas / 24)
+  return [dias && `${dias}d`, `${horas % 24}h`, `${minutos % 60}m`, `${segundos % 60}s`].filter(Boolean).join(" ")
 }
