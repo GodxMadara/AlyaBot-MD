@@ -1773,5 +1773,145 @@
      "gender": "Hombre",
      "source": "Cyberpunk: Edgerunners",
      "keyword": "david_martinez"
+  },
+{
+    "name": "Ranma saotome",
+    "value": 37196,
+    "gender": "Hombre",
+    "source": "Ranma 1/2",
+    "keyword": "ranma_saotome"
+  },
+{
+    "name": "Shampoo",
+    "value": 382372,
+    "gender": "Mujer" ,
+    "source": "Ranma 1/2",
+    "keyword": "shampoo_(ranma_1/2)"
+  },
+{
+    "name": "Akane Tendou",
+    "value": 29382,
+    "gender": "Mujer",
+    "source": "Ranma 1/2",
+    "keyword": "tendou_akane"
+  },
+{
+    "name": "Nene Yashiro",
+    "value": 294678,
+    "gender": "Mujer",
+    "source": "Jibaku Shounen Hanako-kun",
+    "keyword": "yashiro_nene"
+  },
+{
+    "name": "Aoi Akane",
+    "value": 381826,
+    "gender": "Mujer",
+    "source": "Jibaku Shounen Hanako-kun",
+    "keyword": "aoi_akane "
+  },
+{
+    "name": "Hanako-kun",
+    "value": 293729,
+    "gender": "Hombre",
+    "source": "Jibaku Shounen Hanako-kun",
+    "keyword": "hanako_(jibaku_shounen_hanako-kun)"
+  },
+{
+    "name": "Saitama",
+    "value": 2917197,
+    "gender": "Hombre",
+    "source": "One Puch Man",
+    "keyword": "saitama_(one-punch_man)"
+  },
+{
+    "name": "Genos",
+    "value": 28196,
+    "gender": "Hombre",
+    "source": "One Puch Man",
+    "keyword": "genos"
+  },
+{
+    "name": "Garou",
+    "value": 19269,
+    "gender": "Hombre",
+    "source": "One Puch Man",
+    "keyword": "garou_(one-punch_man)"
+  },
+{
+    "name": "Momo Ayase",
+    "value": 192588,
+    "gender": "Mujer",
+    "source": "DandaDan",
+    "keyword": "ayase_momo"
+  },
+{
+    "name": "Qin Shi Huang",
+    "value": 28719,
+    "gender": "Hombre",
+    "source": "Record of Ragnarok",
+    "keyword": "qin_shi_huang_(shuumatsu_no_valkyrie)"
+  },
+{
+    "name": "Marin Kitagawa",
+    "value": 73697,
+    "gender": "Mujer",
+    "source": "My Dress-Up Darling",
+    "keyword": "kitagawa_marin"
+  },
+{
+    "name": "Gojo Kaoru",
+    "value": 3969,
+    "gender": "Hombre",
+    "source": "My Dress-Up Darling",
+    "keyword": "gojou_kaoru "
+  },
+{
+    "name": "Vaporeon",
+    "value": 284619,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "vaporeon"
+  },
+{
+    "name": "Eevee",
+    "value": 39239,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "eevee"
+  },
+{
+    "name": "Sylveon",
+    "value": 291696,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "sylveon"
+  },
+{
+    "name": "Umbreon",
+    "value": 29688,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "umbreon"
+  },
+{
+    "name": "Pikachu",
+    "value": 39268,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "pikachu"
+  },
+{
+    "name": "Lucas",
+    "value": 29268,
+    "gender": "Hombre",
+    "source": "Pokemon",
+    "keyword": "lucas_(pokemon)"
+  },
+{
+    "name": "Gengar",
+    "value": 28178,
+    "gender": "Desconocido",
+    "source": "Pokemon",
+    "keyword": "gengar"
   }
 ]
