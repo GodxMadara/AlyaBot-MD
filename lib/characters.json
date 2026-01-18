@@ -1,130 +1,124 @@
 [
   {
-    "name": "Senko San",
-    "value": 45000,
-    "gender": "Mujer",
-    "source": "Sewayaki Kitsune no Senko-san",
-    "keyword": "senko_(sewayaki_kitsune_no_senko-san)"
-  },
-{
     "name": "Asuna Yuuki",
     "value": 60000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "asuna_(sao)"
   },
-{
+  {
     "name": "Kitigaya Hazuto",
     "value": 60000,
     "gender": "Hombre",
     "source": "Sword Art Online",
     "keyword": "kirigaya_kazuto"
   },
-{
+  {
     "name": "Eugeo",
     "value": 30000,
     "gender": "Hombre",
     "source": "Sword Art Online",
     "keyword": "eugeo"
   },
-{
+  {
     "name": "Sinon",
     "value": 20000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "sinon_(sao-alo)"
   },
-{
+  {
     "name": "Klein",
     "value": 30000,
     "gender": "Hombre",
     "source": "Sword Art Online",
     "keyword": "klein_(sao)"
   },
-{
+  {
     "name": "Leafa",
     "value": 45000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "leafa_(sao)"
   },
-{
+  {
     "name": "Alicia Rue",
     "value": 15000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "alicia_rue"
   },
-{
+  {
     "name": "Eydis",
     "value": 15000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "eydis_(sao)"
-  }, 
-{
+  },
+  {
     "name": "Ayano Keiko",
     "value": 15000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "ayano_keiko"
   },
-{
+  {
     "name": "Quinella",
     "value": 50000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "quinella"
   },
-{
+  {
     "name": "Rosalia",
     "value": 15000,
     "gender": "Mujer",
     "source": "Sword Art Online",
     "keyword": "rosalia_(sword_art_online)"
   },
-{
+  {
     "name": "Darkness",
     "value": 45000,
     "gender": "Mujer",
-    "source": "kono subarashii Sekai ni shukufuku Wo!": "darkness_(konosuba)"
+    "source": "kono subarashii Sekai ni shukufuku Wo!",
+    "keyword": "darkness_(konosuba)"
   },
-{
+  {
     "name": "Wolbach",
     "value": 20000,
     "gender": "Mujer",
     "source": "kono subarashii Sekai ni shukufuku Wo!",
     "keyword": "wolbach"
   },
-{
+  {
     "name": "Belzerg Stylish Sword Iris",
     "value": 50000,
     "gender": "Mujer",
     "source": "kono subarashii Sekai ni shukufuku Wo!",
     "keyword": "iris_(konosuba)"
   },
-{
+  {
     "name": "Amy",
     "value": 25000,
     "gender": "Mujer",
     "source": "kono subarashii Sekai ni shukufuku Wo!",
     "keyword": "amy_(konosuba)"
   },
-{
+  {
     "name": "Arue",
     "value": 25000,
     "gender": "Mujer",
     "source": "kono subarashii Sekai ni shukufuku Wo!",
     "keyword": "arue_(konosuba)"
   },
-{
+  {
     "name": "Cecily",
     "value": 25000,
     "gender": "Mujer",
     "source": "kono subarashii Sekai ni shukufuku Wo!",
     "keyword": "cecily_(konosuba)"
   },
-{
+  {
     "name": "Sylvia",
     "value": 100000,
     "gender": "Mujer",
@@ -1771,272 +1765,300 @@
     "value": "2500",
     "gender": "Mujer",
     "source": "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken",
-    "keyword": "shiina_mahiru_(otonari_no_tenshi-sama)" 
+    "keyword": "shiina_mahiru_(otonari_no_tenshi-sama)"
   },
   {
     "name": "Sylpha Langlis",
     "value": "2000",
     "gender": "Mujer",
     "source": "Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu",
-    "keyword": "sylpha_(dai_nana_oji)" 
+    "keyword": "sylpha_(dai_nana_oji)"
   },
   {
-     "name": "Tina Sprout",
-     "value": "4000",
-     "gender": "Mujer",
-     "source": "Black Bullet",
-     "keyword": "tina_sprout" 
+    "name": "Tina Sprout",
+    "value": "4000",
+    "gender": "Mujer",
+    "source": "Black Bullet",
+    "keyword": "tina_sprout"
   },
   {
-     "name": "Ahiara Enju",
-     "value": "1000",
-     "gender": "Mujer",
-     "source": "Black Bullet",
-     "keyword": "aihara_enju" 
+    "name": "Ahiara Enju",
+    "value": "1000",
+    "gender": "Mujer",
+    "source": "Black Bullet",
+    "keyword": "aihara_enju"
   },
   {
     "name": "Nagisa Kubo",
     "value": "850",
     "gender": "Mujer",
     "source": "Kubo-san wa Mob wo Yurusanai",
-    "keyword": "kubo_nagisa" 
+    "keyword": "kubo_nagisa"
   },
   {
-     "name": "Latifa Fleuranza",
-     "value": "2000",
-     "gender": "Mujer",
-     "source": "Amagami Brilliant Park",
-     "keyword": "latifa_fleuranza" 
+    "name": "Latifa Fleuranza",
+    "value": "2000",
+    "gender": "Mujer",
+    "source": "Amagami Brilliant Park",
+    "keyword": "latifa_fleuranza"
   },
   {
-     "name": "Son goku",
-     "value": "5000",
-     "gender": "Hombre",
-     "source": "Dragon Ball",
-     "keyword": "goku" 
+    "name": "Son goku",
+    "value": "5000",
+    "gender": "Hombre",
+    "source": "Dragon Ball",
+    "keyword": "goku"
   },
   {
-     "name": "Lucy",
-     "value": 28496,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "lucy_(cyberpunk)"
+    "name": "Lucy",
+    "value": 28496,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "lucy_(cyberpunk)"
   },
   {
-     "name": "Rebecca",
-     "value": 26356,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "rebecca_(cyberpunk)"
+    "name": "Rebecca",
+    "value": 26356,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "rebecca_(cyberpunk)"
   },
   {
-     "name": "Kiwi",
-     "value": 7186,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "kiwi_(cyberpunk)"
+    "name": "Kiwi",
+    "value": 7186,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "kiwi_(cyberpunk)"
   },
   {
-     "name": "Dorio",
-     "value": 6186,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "dorio_(cyberpunk)"
+    "name": "Dorio",
+    "value": 6186,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "dorio_(cyberpunk)"
   },
   {
-     "name": "Sasha Yakovleva",
-     "value": 5186,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "sasha_(cyberpunk)"
+    "name": "Sasha Yakovleva",
+    "value": 5186,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "sasha_(cyberpunk)"
   },
   {
-     "name": "Gloria Martinez",
-     "value": 12286,
-     "gender": "Mujer",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "gloria_martinez"
+    "name": "Gloria Martinez",
+    "value": 12286,
+    "gender": "Mujer",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "gloria_martinez"
   },
   {
-     "name": "Maine",
-     "value": 16186,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "maine_(cyberpunk)"
+    "name": "Maine",
+    "value": 16186,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "maine_(cyberpunk)"
   },
   {
-     "name": "Falco",
-     "value": 14176,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "falco_(cyberpunk)"
+    "name": "Falco",
+    "value": 14176,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "falco_(cyberpunk)"
   },
   {
-     "name": "Adam Smasher",
-     "value": 11726,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "adam_smasher"
+    "name": "Adam Smasher",
+    "value": 11726,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "adam_smasher"
   },
   {
-     "name": "Pilar",
-     "value": 13456,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "pilar_(cyberpunk)"
+    "name": "Pilar",
+    "value": 13456,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "pilar_(cyberpunk)"
   },
   {
-     "name": "Ripperdoc",
-     "value": 9186,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "ripperdoc_(cyberpunk_edgerunners)"
+    "name": "Ripperdoc",
+    "value": 9186,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "ripperdoc_(cyberpunk_edgerunners)"
   },
   {
-     "name": "David Martinez",
-     "value": 27139,
-     "gender": "Hombre",
-     "source": "Cyberpunk: Edgerunners",
-     "keyword": "david_martinez"
+    "name": "David Martinez",
+    "value": 27139,
+    "gender": "Hombre",
+    "source": "Cyberpunk: Edgerunners",
+    "keyword": "david_martinez"
   },
-{
+  {
     "name": "Ranma saotome",
     "value": 37196,
     "gender": "Hombre",
     "source": "Ranma 1/2",
     "keyword": "ranma_saotome"
   },
-{
+  {
     "name": "Shampoo",
     "value": 382372,
-    "gender": "Mujer" ,
+    "gender": "Mujer",
     "source": "Ranma 1/2",
     "keyword": "shampoo_(ranma_1/2)"
   },
-{
+  {
     "name": "Akane Tendou",
     "value": 29382,
     "gender": "Mujer",
     "source": "Ranma 1/2",
     "keyword": "tendou_akane"
   },
-{
+  {
     "name": "Nene Yashiro",
     "value": 294678,
     "gender": "Mujer",
     "source": "Jibaku Shounen Hanako-kun",
     "keyword": "yashiro_nene"
   },
-{
+  {
     "name": "Aoi Akane",
     "value": 381826,
     "gender": "Mujer",
     "source": "Jibaku Shounen Hanako-kun",
     "keyword": "aoi_akane "
   },
-{
+  {
     "name": "Hanako-kun",
     "value": 293729,
     "gender": "Hombre",
     "source": "Jibaku Shounen Hanako-kun",
     "keyword": "hanako_(jibaku_shounen_hanako-kun)"
   },
-{
+  {
     "name": "Saitama",
     "value": 2917197,
     "gender": "Hombre",
     "source": "One Puch Man",
     "keyword": "saitama_(one-punch_man)"
   },
-{
+  {
     "name": "Genos",
     "value": 28196,
     "gender": "Hombre",
     "source": "One Puch Man",
     "keyword": "genos"
   },
-{
+  {
     "name": "Garou",
     "value": 19269,
     "gender": "Hombre",
     "source": "One Puch Man",
     "keyword": "garou_(one-punch_man)"
   },
-{
+  {
     "name": "Momo Ayase",
     "value": 192588,
     "gender": "Mujer",
     "source": "DandaDan",
     "keyword": "ayase_momo"
   },
-{
+  {
     "name": "Qin Shi Huang",
     "value": 28719,
     "gender": "Hombre",
     "source": "Record of Ragnarok",
     "keyword": "qin_shi_huang_(shuumatsu_no_valkyrie)"
   },
-{
+  {
     "name": "Marin Kitagawa",
     "value": 73697,
     "gender": "Mujer",
     "source": "My Dress-Up Darling",
     "keyword": "kitagawa_marin"
   },
-{
+  {
     "name": "Gojo Kaoru",
     "value": 3969,
     "gender": "Hombre",
     "source": "My Dress-Up Darling",
     "keyword": "gojou_kaoru "
   },
-{
+  {
     "name": "Vaporeon",
     "value": 284619,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "vaporeon"
   },
-{
+  {
     "name": "Eevee",
     "value": 39239,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "eevee"
   },
-{
+  {
     "name": "Sylveon",
     "value": 291696,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "sylveon"
   },
-{
+  {
     "name": "Umbreon",
     "value": 29688,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "umbreon"
   },
-{
+  {
     "name": "Pikachu",
     "value": 39268,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "pikachu"
   },
-{
+  {
     "name": "Lucas",
     "value": 29268,
     "gender": "Hombre",
     "source": "Pokemon",
     "keyword": "lucas_(pokemon)"
   },
-{
+  {
     "name": "Gengar",
     "value": 28178,
     "gender": "Desconocido",
     "source": "Pokemon",
     "keyword": "gengar"
+  },
+  {
+    "name": "Nezuko Kamado",
+    "value": 665036,
+    "gender": "Mujer",
+    "source": "Kimetsu no Yaiba",
+    "keyword": "kamado_nezuko"
+  },
+  {
+    "name": "Mikasa Ackerman",
+    "value": 946214,
+    "gender": "Mujer",
+    "source": "Shingeki no Kyojin",
+    "keyword": "mikasa_ackerman"
+  },
+  {
+    "name": "Senko San",
+    "value": 783033,
+    "gender": "Mujer",
+    "source": "Sewayaki Kitsune no Senko-san",
+    "keyword": "senko_(sewayaki_kitsune_no_senko-san)"
+  },
+  {
+    "name": "Ryo Asuka",
+    "value": 104705,
+    "gender": "Hombre",
+    "source": "Devilman Crybaby",
+    "keyword": "satan_(devilman)"
   }
 ]
