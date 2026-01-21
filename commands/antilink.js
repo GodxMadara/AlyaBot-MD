@@ -1,11 +1,5 @@
 const linkRegex = /(https?:\/\/)?(chat\.whatsapp\.com\/[0-9A-Za-z]{20,24}|whatsapp\.com\/channel\/[0-9A-Za-z]{20,24})/i
 
-const allowedLinks = [
-  'https://whatsapp.com/channel/0029VbApwZ9ISTkEBb6ttS3F',
-  'https://whatsapp.com/channel/0029Vb6IdnEGU3BTahqaLL2V',
-  'https://chat.whatsapp.com/JL3lRO1Fx3sFVEfUDnMrul?mode=ems_copy_t'
-]
-
 const joinCommands = [
   '/invite', '#invite', '-invite',
   '!invite', '.invite', '+invite'
@@ -28,10 +22,9 @@ export default async (m, client) => {
   const isPrimary = !primaryBotId || primaryBotId === botId
 
   const isGroupLink = linkRegex.test(m.text)
-  const hasAllowedLink = allowedLinks.some(link => m.text.includes(link))
   const command = m.text.trim().split(/\s+/)[0].toLowerCase()
 
-  if (hasAllowedLink || !isGroupLink || !chat?.antilinks || isAdmin || !isBotAdmin || !isPrimary) return
+  if (!isGroupLink || !chat?.antilinks || isAdmin || !isBotAdmin || !isPrimary) return
 
   await client.sendMessage(m.chat, {
     delete: {
