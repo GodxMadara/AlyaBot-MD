@@ -1,8 +1,6 @@
-import yts from 'yt-search'
-import fetch from 'node-fetch'
-import { getBuffer } from '../../lib/message.js'
-
-const isYTUrl = (url) => /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/i.test(url)
+import yts from 'yt-search';
+import fetch from 'node-fetch';
+import { getBuffer } from '../../lib/message.js';
 
 export default {
   command: ['play', 'mp3', 'ytmp3', 'ytaudio', 'playaudio'],
@@ -10,21 +8,22 @@ export default {
   run: async (client, m, args) => {
     try {
       if (!args[0]) {
-        return m.reply('🫛 Por favor, menciona el nombre o URL del video que deseas descargar')
+        return m.reply('🌵 Por favor, menciona el nombre o URL del video que deseas descargar')
       }
 
       const query = args.join(' ')
-      let url, title, videoInfo
+      let url, title, thumbBuffer
 
-      if (!isYTUrl(query)) {
+      if (!/^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\//i.test(query)) {
         const search = await yts(query)
         if (!search.all.length) {
-          return m.reply('🍋‍🟩 No se encontraron resultados')
+          return m.reply('🥦 No se encontraron resultados')
         }
 
-        videoInfo = search.all[0]
+        const videoInfo = search.all[0]
         url = videoInfo.url
         title = videoInfo.title
+        thumbBuffer = await getBuffer(videoInfo.image)
 
         const vistas = (videoInfo.views || 0).toLocaleString()
         const canal = videoInfo.author?.name || 'Desconocido'
@@ -45,29 +44,45 @@ export default {
         })
       } else {
         url = query
-        title = 'YouTube Audio'
       }
 
-      const res = await fetch(`${api.url2}/download/ytmp3?url=${encodeURIComponent(url)}&api_key=${api.key}`)
-      const result = await res.json()
-
-      if (!result.status || !result.result?.dl_url) {
-        return m.reply('《✧》 No se pudo descargar el *audio*, intenta más tarde.')
+      let result
+      try {
+        const res = await fetch(`${api.url}/dl/ytmp3?url=${encodeURIComponent(url)}&key=${api.key}`)
+        result = await res.json()
+        if (!result.status || !result.result || !result.result.download) {
+          throw new Error('Primera API falló')
+        }
+      } catch {
+        try {
+          const fallback = await fetch(`${api.url}/dl/ytdl?url=${encodeURIComponent(url)}&type=audio&key=${api.key}`)
+          result = await fallback.json()
+          if (!result.status || !result.result || !result.result.dl) {
+            return m.reply('🌵 No se pudo descargar el *audio*, intenta más tarde.')
+          }
+        } catch {
+          return m.reply('🌵 No se pudo procesar el enlace. El servidor no respondió correctamente.')
+        }
       }
 
-      const audioBuffer = await getBuffer(result.result.dl_url)
+      const audioTitle = result.result.title
+      const dlUrl = result.result.download || result.result.dl
+      const thumbUrl = result.result.thumbnail
 
-      const mensaje = {
-        audio: audioBuffer,
-        mimetype: 'audio/mpeg',
-        fileName: `${title}.mp3`
-      }
+      const audioBuffer = await getBuffer(dlUrl)
+      let mensaje;
+
+        mensaje = {
+          audio: audioBuffer,
+          mimetype: 'audio/mpeg',
+          fileName: `${audioTitle}.mp3`
+        };
 
       await client.sendMessage(m.chat, mensaje, { quoted: m })
 
     } catch (e) {
-      // console.error(e)
+      // console.log(e)
       await m.reply(msgglobal)
     }
   }
-}
+};
