@@ -35,6 +35,7 @@
     "human-readable": "^0.2.1",
     "jimp": "latest",
     "moment-timezone": "^0.5.37",
+    "grapheme-splitter": "^1.0.4",
     "moment": "^2.29.4",
     "lodash": "latest",
     "node-fetch": "^2.6.1",
