@@ -19,7 +19,7 @@ function formatDate(timestamp) {
 }
 
 export default {
-  command: ['claim', 'c'],
+  command: ['claim', 'buy', 'c'],
   category: 'gacha',
   run: async (client, m, args) => {
     const db = global.db.data
